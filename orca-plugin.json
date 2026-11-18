@@ -7,6 +7,7 @@
   "engines": {
     "orca": ">=1.4.246"
   },
+  "license": "MIT",
   "execution": "sandboxed-ui",
   "pluginApi": 1,
   "contributes": {
