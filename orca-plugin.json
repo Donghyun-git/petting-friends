@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 2,
+  "id": "petting-friends",
+  "name": "Petting Friends",
+  "version": "0.1.0",
+  "description": "Pet cute friends by rubbing them with the mouse. Pick one of four, in English or Korean.",
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "execution": "sandboxed-ui",
+  "pluginApi": 1,
+  "contributes": {
+    "panels": [
+      {
+        "id": "petting-friends",
+        "title": "Petting Friends",
+        "icon": "star",
+        "entry": "src/panel.ts"
+      }
+    ],
+    "settings": [
+      {
+        "key": "language",
+        "title": "Language / 언어",
+        "description": "Language of the panel. Auto follows Orca's own language.",
+        "type": "string",
+        "default": "auto",
+        "enum": ["auto", "ko", "en"],
+        "enumLabels": ["Auto", "한국어", "English"]
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "kind": "storage:own"
+    },
+    {
+      "kind": "settings:own"
+    }
+  ]
+}
